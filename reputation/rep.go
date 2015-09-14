@@ -68,6 +68,8 @@ func (n *agent) AddNode(addr net.Addr) {
 }
 
 func (n *agent) Reputation(addr net.Addr) int64 {
+	// TODO: Use a logistic function to grow the score until it basically stops
+	// growing after 15 days or so.
 	for _ = range n.nodes {
 
 	}
